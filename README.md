@@ -15,3 +15,34 @@ The second advantage to Fetcher is in it's selector parser.  With Fetcher, you c
 
 Fetcher can also automatically determine template names for you, based on either the filename, or the selector (if a selector is used).  Alternatively, you can pass your own template name.
 
+## Code Examples
+
+Single template caching examples...
+
+    $.fetcher("twitter.html", "twitter", callback);
+    $.fetcher("twitter.html", callback);
+    $.fetcher("twitter.html");
+    $.fetcher("twitter.html").then(callback);
+    
+    $.fetcher("templates.html #twitter", callback);
+    $.fetcher("templates.html .socials .twitter").then(callback);
+    
+Multiple template caching examples...
+
+    $.fetcher([
+        ["twitter.html", function(){}],
+        ["templates.html #facebook"],
+        ["templates.html #rss", "feed", function(){}]
+    ]).then(callback);
+    
+## Basic Documentation
+
+Single template usage, returns Deferred object.
+
+    $.fetcher(url, [name], [callback]);
+    
+Multiple template usage, returns Deferred object when all are loaded.
+
+    $.fetcher([
+        [url, [name], [callback]]
+    ]);
