@@ -43,14 +43,14 @@
 		
 		// get the filename without extension, and the url without the selector, and the selector
 		if(name===''){
-			matches = /^([\S]+)((\s[\S]+)*)$/.exec(url); // this seems horrible?
+			matches = /^([\S]+)((\s[\S]+)*)$/.exec(url); // better way?
 			url = matches[1];
 			if(matches[3]){
 				// remove selector prefixes for template name
 				name = matches[3].replace(/[\#\.\s]/g, "");
 				selector = matches[2].substr(1);
 			}else{
-				matches = /((^[\S]+\/)|^)(([\S]+)\.[\S]+)$/.exec(url); // this also seems horrible
+				matches = /((^[\S]+\/)|^)(([\S]+)\.[\S]+)$/.exec(url); // better way?
 				name = matches[4];
 			}
 		};
