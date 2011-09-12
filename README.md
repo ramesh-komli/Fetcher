@@ -3,8 +3,9 @@
 Fetcher is a plugin that lets you specify external template files for jQuery-tmpl, and caches them for you, returning a deferred object for later callback (or you can put a callback directly in).
 
 Fetcher requires:
--   jQuery 1.5+
--   jQuery Tmpl Plugin
+
+*   jQuery 1.5+
+*   jQuery Tmpl Plugin
 
 ## Why Use Fetcher
 
