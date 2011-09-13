@@ -1,10 +1,12 @@
 /*
 	Fetcher
 	Version 1.0
-	Michael Smotherman (@codeinfused)
+    Copyright: Michael Smotherman (@codeinfused)
+    Dual licensed under the MIT or GPL Version 2 licenses.
+    http://jquery.org/license
 	Dependencies:
-		jQuery 1.5+
-		jQuery tmpl plugin
+     - jQuery 1.5+
+     - jQuery tmpl plugin
 	=========================
 	Goals:
 		Loads a single or multiple external templates, and creates cached versions.
