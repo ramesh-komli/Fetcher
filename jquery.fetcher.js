@@ -29,7 +29,7 @@
 			defarr.push( $.fetcher.f(url, name, cb) );
 		}
 		
-		$.when.apply($, defarr).then(def.resolve);
+		$.when.apply($, defarr).then(def.resolve, def.reject);
 		
 		return def;
 	};
