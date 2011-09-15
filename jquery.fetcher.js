@@ -1,6 +1,6 @@
 /*
     Fetcher
-    Version 1.0
+    Version 1.01
     Copyright: Michael Smotherman (@codeinfused)
     Dual licensed under the MIT or GPL Version 2 licenses.
     http://jquery.org/license
@@ -59,11 +59,11 @@
 		
 		return $.get(url, function(r){
 		
-		if(selector){
-			$(r).find(selector).template(name);
-		}else{
-			$.template(name, r);
-		};
+			if(selector){
+				$('<div />').append(r).find(selector).template(name);
+			}else{
+				$.template(name, r);
+			};
 			cb();
 		});
 	};
