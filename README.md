@@ -19,6 +19,7 @@ Fetcher can also automatically determine template names for you, based on either
 
 Single template caching examples...
 
+```javascript
     // creates a template called "twitter"
     $.fetcher("twitter.html", "twitter", callback);
     
@@ -30,23 +31,30 @@ Single template caching examples...
     // also creates a template called "twitter", but from a template's selector
     $.fetcher("templates.html #twitter", callback);
     $.fetcher("templates.html .socials .twitter").then(callback);
+```
     
 Multiple template caching examples...
 
+```javascript
     $.fetcher([
         ["twitter.html", function(){}],
         ["templates.html #facebook"],
         ["templates.html #rss", "feed", function(){}]
     ]).then(callback);
+```
     
 ## Basic Documentation
 
 Single template usage, returns Deferred object.
 
+```javascript
     $.fetcher(url, [name], [callback]);
+```
     
 Multiple template usage, returns Deferred object when all are loaded.
 
+```javascript
     $.fetcher([
         [url, [name], [callback]]
     ]);
+```
