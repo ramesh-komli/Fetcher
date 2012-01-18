@@ -1,11 +1,15 @@
 # Fetcher, An External jQuery Template Caching Plugin
 
-Fetcher is a plugin that lets you specify external template files for jQuery-tmpl, and caches them for you, returning a deferred object for later callback (or you can put a callback directly in).
+Fetcher is a plugin that lets you specify external template files for jsRender, and caches them for you, returning a deferred object for later callback (or you can put a callback directly in).
 
 Fetcher requires:
 
 *   jQuery 1.5+
-*   jQuery Tmpl Plugin
+*   jsRender (https://github.com/BorisMoore/jsrender)
+
+## UPDATE (Fetcher v2.0)
+
+Fetcher has been updated to 2.0 since jq-tmpl.js was deprecated from jquery support. JSRender was suggested, and I've gone with it. I plan to support other templating engines later!
 
 ## Why Use Fetcher
 
