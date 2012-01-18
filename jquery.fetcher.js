@@ -1,18 +1,13 @@
 /*
     Fetcher
-    Version 1.01
+    Version 2.0
     Copyright: Michael Smotherman (@codeinfused)
     Dual licensed under the MIT or GPL Version 2 licenses.
     http://jquery.org/license
+    
     Dependencies:
      - jQuery 1.5+
-     - jQuery tmpl plugin
-    =========================
-    Goals:
-    	Loads a single or multiple external templates, and creates cached versions.
-    	Can automatically determine template name.
-    	Can specify individual callbacks.
-    	Returns deferred object.
+     - jsRender (was retooled away from jq-tmpl)    
 */
 
 ;(function($){
@@ -59,11 +54,8 @@
 		
 		return $.get(url, function(r){
 		
-			if(selector){
-				$('<div />').append(r).find(selector).template(name);
-			}else{
-				$.template(name, r);
-			};
+			$.template(name, $('<div />').append(r).find((selector?selector:'script:first')).html());
+			
 			cb();
 		});
 	};
